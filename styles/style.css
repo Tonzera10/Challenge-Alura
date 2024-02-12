@@ -1,17 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: Inter, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f8f4fc;
 }
 
-header, footer {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
+header{
+    margin: 2.5rem;
 }
 
 main {
-    padding: 20px;
+    display: flex;
+    gap: 80px;
 }
 
 section {
@@ -21,42 +23,105 @@ section {
     margin-bottom: 20px;
 }
 
-.title {
-    margin-top: 0;
+.input {
+    border: none;
 }
 
 .input-text {
-    width: 50%;
+    width: 45%;
     padding: 10px;
-    margin-bottom: 10px;
+    margin: 0rem 0rem 39.68rem 15rem;
     background-color: transparent;
     border: none;
+    font-size: 2rem;
 }
 
-.buttons button {
-    padding: 10px 20px;
-    margin-right: 10px;
-    border: none;
-    background-color: #007bff;
-    color: #fff;
+.alerta{
+    margin-left: 15rem;
+    margin-bottom: 16px;
+}
+
+span{
+    font-size: 0.75rem;
+}
+
+.botoes {
+    display: flex;
+    margin-left: 15rem;
+    gap: 24px;
+}
+
+.botao-azul {
+    padding: 1.5rem;
+    color: white;
+    background-color: #103c74;
+    width: 17.5rem;
     cursor: pointer;
-    border-radius: 10px;
+    border-radius: 24px;
 }
 
-.output textarea {
-    width: 50%;
-    height: 150px;
+.botao-cinza {
+    padding: 1.5rem;
+    color: #103c74;
+    background-color: #D8DFE8;
+    width: 17.5rem;
+    cursor: pointer;
+    border-radius: 1.5rem;
+}
+
+.botao-branco {
+    padding: 1.5rem;
+    color: #103c74;
+    background-color: transparent;
+    width: 17.5rem;
+    cursor: pointer;
+    border-radius: 1.5rem;
+    display: none;
+}
+
+.output {
+    width: 21rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 10px;
     margin-top: 10px;
-    resize: none;
+    border: none;
+    border-radius: 32px;
 }
 
-footer p {
-    margin: 0;
+textarea{
+    width: 21rem;
+    background-color: transparent;
+    border: none;
+    display: none;
 }
 
-footer a {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 5px;
+.output-foto{
+    width: 21rem;
+}
+
+.output-texto-maior{
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.output-texto-menor{
+    font-size: 1rem;
+    text-align: center;
+}
+
+footer {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.imagem-logo {
+    width: 32px;
 }

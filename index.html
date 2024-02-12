@@ -1,31 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Decodificador de Texto</title>
-    <link rel="stylesheet" href="./styles/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
     <header>
-        <!-- Conteúdo do cabeçalho (opcional) -->
+      <img src="./assets/logoAlura.png" alt="Logo da Alura" />
     </header>
-    <main>
-        <section>
-            <h1 class="title">Decodificador de Texto</h1>
-            <input class="input-text" type="text" required placeholder="Digite seu texto aqui!">
-            <div class="buttons">
-                <button>Criptografar</button>
-                <button>Descriptografar</button>
-            </div>
-            <div class="output">
-                <textarea maxlength="5000" disabled></textarea>
-                <img src="./assets/luffy.jpg" alt="luffy confuso">
-            </div>
-        </section>
+    <main class="container">
+      <section class="input">
+        <input
+          class="input-text"
+          type="text"
+          required
+          placeholder="Digite seu texto aqui!"
+        />
+        <div class="alerta">
+          <img src="./assets/Group.png" alt="Exclamação" />
+          <span>Apenas letras minúsculas e sem acento.</span>
+        </div>
+        <div class="botoes">
+          <button class="botao-azul" onclick="criptografar()">
+            Criptografar
+          </button>
+          <button class="botao-cinza" onclick="descriptografar()">
+            Descriptografar
+          </button>
+        </div>
+      </section>
+      <section id="output" class="output">
+        <textarea maxlength="5000"></textarea>
+        <img
+          id="imagem-output"
+          class="output-foto"
+          src="./assets/fotoPesquisa.png"
+          alt="foto de pesquisa"
+        />
+        <p id="texto-output" class="output-texto-maior">
+          Nenhuma mensagem encontrada
+        </p>
+        <p id="texto-output" class="output-texto-menor">
+          Digite um texto que você deseja criptografar ou descriptografar.
+        </p>
+        <button id="botao-copiar" onclick="copiar()" class="botao-branco">
+          Copiar
+        </button>
+      </section>
     </main>
     <footer>
-        <p>Desenvolvido por Everton <a href="">LinkedIn</a> <a href="#">GitHub</a></p>
+      <p>Desenvolvido por Everton</p>
+      <a href="https://github.com/Tonzera10" target="_blank">
+        <img
+          class="imagem-logo"
+          src="./assets/Logo-github.png"
+          alt="Ícone do Github"
+        />
+      </a>
+      <a href="https://www.linkedin.com/in/ton-mello/" target="_blank">
+        <img
+          class="imagem-logo"
+          src="./assets/Logo-linkedin.png"
+          alt="Ícone do Linkedin"
+        />
+      </a>
     </footer>
-</body>
+  </body>
 </html>
