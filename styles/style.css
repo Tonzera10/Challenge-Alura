@@ -132,12 +132,13 @@ footer {
     }
 
     .output, .botoes, .alerta {
-        width: 80%;
+        width: 70%;
         margin: 0% 10%;
     }
 
     .input-text{
         width: 80%;
         margin: 0% 0% 50% 10%;
+        font-size: 1.5rem;
     }
 }
