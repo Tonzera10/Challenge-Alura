@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+body {
+    font-family: Inter, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f4fc;
+}
+
+header{
+    margin: 2.5rem;
+}
+
+main {
+    display: flex;
+    gap: 80px;
+}
+
+section {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.input {
+    border: none;
+}
+
+.input-text {
+    width: 45%;
+    padding: 10px;
+    margin: 0rem 0rem 39.68rem 15rem;
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+}
+
+.alerta{
+    margin-left: 15rem;
+    margin-bottom: 16px;
+}
+
+span{
+    font-size: 0.75rem;
+}
+
+.botoes {
+    display: flex;
+    margin-left: 15rem;
+    gap: 24px;
+}
+
+.botao-azul {
+    padding: 1.5rem;
+    color: white;
+    background-color: #103c74;
+    width: 17.5rem;
+    cursor: pointer;
+    border-radius: 24px;
+}
+
+.botao-cinza {
+    padding: 1.5rem;
+    color: #103c74;
+    background-color: #D8DFE8;
+    width: 17.5rem;
+    cursor: pointer;
+    border-radius: 1.5rem;
+}
+
+.botao-branco {
+    padding: 1.5rem;
+    color: #103c74;
+    background-color: transparent;
+    width: 17.5rem;
+    cursor: pointer;
+    border-radius: 1.5rem;
+    display: none;
+}
+
+.output {
+    width: 21rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 32px;
+}
+
+textarea{
+    width: 21rem;
+    background-color: transparent;
+    border: none;
+    display: none;
+}
+
+.output-foto{
+    width: 21rem;
+}
+
+.output-texto-maior{
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.output-texto-menor{
+    font-size: 1rem;
+    text-align: center;
+}
+
+footer {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.imagem-logo {
+    width: 32px;
+}
+
+@media screen and (max-width: 1000px) {
+    main {
+        flex-direction: column;
+    }
+
+    .output, .botoes, .alerta {
+        width: 80%;
+        margin: 0% 10%;
+    }
+
+    .input-text{
+        width: 80%;
+        margin: 0% 0% 50% 10%;
+    }
+}
