@@ -125,3 +125,19 @@ footer {
 .imagem-logo {
     width: 32px;
 }
+
+@media screen and (max-width: 1000px) {
+    main {
+        flex-direction: column;
+    }
+
+    .output, .botoes, .alerta {
+        width: 80%;
+        margin: 0% 10%;
+    }
+
+    .input-text{
+        width: 80%;
+        margin: 0% 0% 50% 10%;
+    }
+}

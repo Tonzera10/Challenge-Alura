@@ -14,7 +14,9 @@
       <section class="input">
         <input
           class="input-text"
+          id="inputText"
           type="text"
+          onkeypress="return apenasMinusculas(event)"
           required
           placeholder="Digite seu texto aqui!"
         />
@@ -32,7 +34,7 @@
         </div>
       </section>
       <section id="output" class="output">
-        <textarea maxlength="5000"></textarea>
+        <textarea id="output-texto" maxlength="5000"></textarea>
         <img
           id="imagem-output"
           class="output-foto"
@@ -67,5 +69,7 @@
         />
       </a>
     </footer>
+
+    <script src="app.js" defer></script>
   </body>
 </html>
