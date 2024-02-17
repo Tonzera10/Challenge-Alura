@@ -28,11 +28,11 @@ section {
 }
 
 .input-text {
-    width: 45%;
+    width: 65%;
     padding: 10px;
     margin: 0rem 0rem 39.68rem 15rem;
     background-color: transparent;
-    border: none;
+    resize: none;
     font-size: 2rem;
 }
 
@@ -76,7 +76,6 @@ span{
     width: 17.5rem;
     cursor: pointer;
     border-radius: 1.5rem;
-    display: none;
 }
 
 .output {
@@ -92,11 +91,28 @@ span{
     border-radius: 32px;
 }
 
-textarea{
-    width: 21rem;
+/* #conteudo-original{
+    display: none;
+} */
+
+.conteudo-substituto{
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    display: none;
+    margin: 5% 0%;
+}
+
+#output-texto{
+    width: 20rem;
+    height: 40rem;
     background-color: transparent;
     border: none;
-    display: none;
+    resize: none;
+    font-size: 1.5rem;
+    color: #505454;
 }
 
 .output-foto{
@@ -132,13 +148,17 @@ footer {
     }
 
     .output, .botoes, .alerta {
-        width: 70%;
-        margin: 0% 10%;
+        width: 80%;
+        margin: 0% 0% 0% 5%;
     }
 
     .input-text{
         width: 80%;
-        margin: 0% 0% 50% 10%;
+        margin: 0% 0% 50% 5%;
         font-size: 1.5rem;
+    }
+
+    .conteudo-substituto{
+        height: 50%;
     }
 }

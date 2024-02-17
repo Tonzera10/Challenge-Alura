@@ -13,14 +13,13 @@
     </header>
     <main class="container">
       <section class="input">
-        <input
+        <textarea
           class="input-text"
           id="inputText"
           type="text"
           onkeypress="return apenasMinusculas(event)"
           required
-          placeholder="Digite seu texto aqui!"
-        />
+          placeholder="Digite seu texto"></textarea>
         <div class="alerta">
           <img src="./assets/Group.png" alt="Exclamação" />
           <span>Apenas letras minúsculas e sem acento.</span>
@@ -35,22 +34,26 @@
         </div>
       </section>
       <section id="output" class="output">
-        <textarea id="output-texto" maxlength="5000"></textarea>
-        <img
-          id="imagem-output"
-          class="output-foto"
-          src="./assets/fotoPesquisa.png"
-          alt="foto de pesquisa"
-        />
-        <p id="texto-output" class="output-texto-maior">
-          Nenhuma mensagem encontrada
-        </p>
-        <p id="texto-output" class="output-texto-menor">
-          Digite um texto que você deseja criptografar ou descriptografar.
-        </p>
-        <button id="botao-copiar" onclick="copiar()" class="botao-branco">
-          Copiar
-        </button>
+        <div id="conteudo-original">
+          <img
+            id="imagem-output"
+            class="output-foto"
+            src="./assets/fotoPesquisa.png"
+            alt="foto de pesquisa"
+          />
+          <p id="texto-output" class="output-texto-maior">
+            Nenhuma mensagem encontrada
+          </p>
+          <p id="texto-output" class="output-texto-menor">
+            Digite um texto que você deseja criptografar ou descriptografar.
+          </p>
+        </div>
+        <div id="conteudo-substituto" class="conteudo-substituto">
+          <textarea id="output-texto" maxlength="5000"></textarea>
+          <button id="botao-copiar" onclick="copiar()" class="botao-branco">
+            Copiar
+          </button>
+        </div>
       </section>
     </main>
     <footer>

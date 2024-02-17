@@ -1,6 +1,8 @@
 let texto = document.getElementById("inputText");
 let output = document.getElementById("output");
 let outputTexto = document.getElementById('output-texto');
+let outputOriginal = document.getElementById('conteudo-original');
+let outputSubstituto = document.getElementById('conteudo-substituto');
 
 function apenasMinusculas(event) {
   const charCode = event.which || event.keyCode;
@@ -15,6 +17,7 @@ function apenasMinusculas(event) {
 function criptografar() {
   const textoCriptografado = criptografarTexto(texto.value);
   outputTexto.innerText = textoCriptografado;
+  substituirOutput();
 }
 
 function criptografarTexto(texto) {
@@ -29,6 +32,7 @@ function criptografarTexto(texto) {
 function descriptografar() {
   const textoDescriptografado = descriptografarTexto(texto.value);
   outputTexto.innerText = textoDescriptografado;
+  substituirOutput();
 }
 
 function descriptografarTexto(texto) {
@@ -41,8 +45,19 @@ function descriptografarTexto(texto) {
 }
 
 function copiar() {
-  window.navigator.clipboard.writeText(resposta.value);
+  window.navigator.clipboard.writeText(outputTexto.value);
   alert("Copiado com sucesso!");
 }
 
-
+function substituirOutput() {
+  if(texto.value == ""){
+    outputOriginal.style.display = "flex";
+    outputOriginal.style.flexDirection = "column";
+    outputSubstituto.style.display = "none";
+  } else {
+    outputOriginal.style.display = "none";
+    outputSubstituto.style.display = "flex";
+    outputSubstituto.style.flexDirection = "column";
+    outputSubstituto.style.justifyContent = "space-between";
+  }
+}
