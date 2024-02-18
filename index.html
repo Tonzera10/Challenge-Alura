@@ -4,58 +4,67 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="app.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.5/dist/sweetalert2.all.min.js"></script>
     <title>Decodificador de Texto</title>
     <link rel="stylesheet" href="./styles/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.5/dist/sweetalert2.min.css"
+      rel="folha de estilo"
+    />
   </head>
   <body>
-    <header>
-      <img src="./assets/logoAlura.png" alt="Logo da Alura" />
-    </header>
-    <main class="container">
-      <section class="input">
-        <textarea
-          class="input-text"
-          id="inputText"
-          type="text"
-          onkeypress="return apenasMinusculas(event)"
-          required
-          placeholder="Digite seu texto"></textarea>
-        <div class="alerta">
-          <img src="./assets/Group.png" alt="Exclamação" />
-          <span>Apenas letras minúsculas e sem acento.</span>
-        </div>
-        <div class="botoes">
-          <button class="botao-azul" onclick="criptografar()">
-            Criptografar
-          </button>
-          <button class="botao-cinza" onclick="descriptografar()">
-            Descriptografar
-          </button>
-        </div>
-      </section>
-      <section id="output" class="output">
-        <div id="conteudo-original">
-          <img
-            id="imagem-output"
-            class="output-foto"
-            src="./assets/fotoPesquisa.png"
-            alt="foto de pesquisa"
-          />
-          <p id="texto-output" class="output-texto-maior">
-            Nenhuma mensagem encontrada
-          </p>
-          <p id="texto-output" class="output-texto-menor">
-            Digite um texto que você deseja criptografar ou descriptografar.
-          </p>
-        </div>
-        <div id="conteudo-substituto" class="conteudo-substituto">
-          <textarea id="output-texto" maxlength="5000"></textarea>
-          <button id="botao-copiar" onclick="copiar()" class="botao-branco">
-            Copiar
-          </button>
-        </div>
-      </section>
-    </main>
+    <div class="container">
+      <header>
+        <img src="./assets/logoAlura.png" alt="Logo da Alura" />
+      </header>
+      <main>
+        <section class="input">
+          <textarea
+            class="input-text"
+            id="inputText"
+            type="text"
+            onkeypress="return apenasMinusculas(event)"
+            ls-textarea-autoresize
+            required
+            placeholder="Digite seu texto"
+          ></textarea>
+          <div class="alerta">
+            <img src="./assets/Group.png" alt="Exclamação" />
+            <span>Apenas letras minúsculas e sem acento.</span>
+          </div>
+          <div class="botoes">
+            <button class="botao-azul" onclick="criptografar()">
+              Criptografar
+            </button>
+            <button class="botao-cinza" onclick="descriptografar()">
+              Descriptografar
+            </button>
+          </div>
+        </section>
+        <section id="output" class="output">
+          <div id="conteudo-original">
+            <img
+              id="imagem-output"
+              class="output-foto"
+              src="./assets/fotoPesquisa.png"
+              alt="foto de pesquisa"
+            />
+            <p id="texto-output" class="output-texto-maior">
+              Nenhuma mensagem encontrada
+            </p>
+            <p id="texto-output" class="output-texto-menor">
+              Digite um texto que você deseja criptografar ou descriptografar.
+            </p>
+          </div>
+          <div id="conteudo-substituto" class="conteudo-substituto">
+            <textarea id="output-texto" maxlength="5000" rows="10"></textarea>
+            <button id="botao-copiar" onclick="copiar()" class="botao-branco">
+              Copiar
+            </button>
+          </div>
+        </section>
+      </main>
+    </div>
     <footer>
       <p>Desenvolvido por Everton</p>
       <a href="https://github.com/Tonzera10" target="_blank">

@@ -46,7 +46,11 @@ function descriptografarTexto(texto) {
 
 function copiar() {
   window.navigator.clipboard.writeText(outputTexto.value);
-  alert("Copiado com sucesso!");
+  Swal.fire({
+    title: "Copiado!",
+    text: "Você copiou o texto.",
+    icon: "success"
+  });
 }
 
 function substituirOutput() {
@@ -57,7 +61,5 @@ function substituirOutput() {
   } else {
     outputOriginal.style.display = "none";
     outputSubstituto.style.display = "flex";
-    outputSubstituto.style.flexDirection = "column";
-    outputSubstituto.style.justifyContent = "space-between";
   }
 }

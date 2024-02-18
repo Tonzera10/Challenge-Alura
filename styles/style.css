@@ -1,14 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
-body {
-    font-family: Inter, sans-serif;
+*{
     margin: 0;
     padding: 0;
+}
+body {
+    font-family: Inter, sans-serif;
     background-color: #f8f4fc;
 }
-
-header{
-    margin: 2.5rem;
+.container {
+    display: flex;
+    gap: 80px;
+    margin: 40px;
 }
 
 main {
@@ -16,117 +19,118 @@ main {
     gap: 80px;
 }
 
-section {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
 .input {
     border: none;
+    width: 680px;
+    margin-top: 128px;
 }
 
 .input-text {
-    width: 65%;
-    padding: 10px;
-    margin: 0rem 0rem 39.68rem 15rem;
+    width: 680px;
+    height: 680px;
     background-color: transparent;
+    border: none;
     resize: none;
-    font-size: 2rem;
+    font-size: 1.75rem;
 }
 
 .alerta{
-    margin-left: 15rem;
     margin-bottom: 16px;
 }
 
 span{
-    font-size: 0.75rem;
+    font-size: 0.60rem;
 }
 
 .botoes {
     display: flex;
-    margin-left: 15rem;
     gap: 24px;
 }
 
 .botao-azul {
-    padding: 1.5rem;
+    padding: 24px;
     color: white;
     background-color: #103c74;
-    width: 17.5rem;
+    width: 328px;
+    font-size: 0.80rem;
     cursor: pointer;
     border-radius: 24px;
 }
 
 .botao-cinza {
-    padding: 1.5rem;
+    padding: 24px;
     color: #103c74;
     background-color: #D8DFE8;
-    width: 17.5rem;
+    width: 328px;
+    font-size: 0.80rem;
     cursor: pointer;
-    border-radius: 1.5rem;
+    border-radius: 24px;
 }
 
 .botao-branco {
-    padding: 1.5rem;
+    padding: 24px;
     color: #103c74;
     background-color: transparent;
-    width: 17.5rem;
+    width: 336px;
+    font-size: 0.80rem;
     cursor: pointer;
-    border-radius: 1.5rem;
+    border-radius: 24px;
 }
 
 .output {
-    width: 21rem;
+    width: 400px;
+    height: 944px;
     background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 10px;
-    margin-top: 10px;
+    gap: 32px;
     border: none;
     border-radius: 32px;
 }
 
-/* #conteudo-original{
-    display: none;
-} */
+.conteudo-original{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 .conteudo-substituto{
-    height: 100%;
     display:flex;
     flex-direction: column;
+    gap: 32px;
     align-items: center;
     justify-content: space-between;
     display: none;
-    margin: 5% 0%;
 }
 
 #output-texto{
-    width: 20rem;
-    height: 40rem;
+    width: 336px;
+    height: 781px;
     background-color: transparent;
     border: none;
     resize: none;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #505454;
 }
 
 .output-foto{
-    width: 21rem;
+    width: 336px;
+    
 }
 
 .output-texto-maior{
-    font-size: 1.5rem;
+    width: 336px;
+    font-size: 1.2rem;
     font-weight: 700;
     text-align: center;
 }
 
 .output-texto-menor{
-    font-size: 1rem;
+    width: 336px;
+    font-size: 0.80rem;
     text-align: center;
 }
 
@@ -142,23 +146,51 @@ footer {
     width: 32px;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
+    .container {
+        flex-direction: column;
+        margin-top: 40px;
+    }
+    
     main {
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
-    .output, .botoes, .alerta {
-        width: 80%;
-        margin: 0% 0% 0% 5%;
+    .input{
+        margin-top: 0px;
+        gap: 32px;
     }
 
-    .input-text{
-        width: 80%;
-        margin: 0% 0% 50% 5%;
-        font-size: 1.5rem;
+    .output{
+        width: 624px;
+        height: auto;
+        padding: 32px;
+    }
+
+    .conteudo-original{
+        gap: 16px;
     }
 
     .conteudo-substituto{
-        height: 50%;
+        height: auto;
+    }
+    
+    #output-texto{
+        width: 624px;
+        height: auto;
+    }
+
+    .botao-branco{
+        width: 624px;
+    }
+
+    .output-foto{
+        display: none;
+    }
+    
+    .output-texto-maior, .output-texto-menor{
+        width: 624px;
     }
 }
