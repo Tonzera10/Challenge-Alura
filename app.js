@@ -7,7 +7,7 @@ let outputSubstituto = document.getElementById('conteudo-substituto');
 function apenasMinusculas(event) {
   const charCode = event.which || event.keyCode;
   const charStr = String.fromCharCode(charCode);
-  if (/[^a-z]/.test(charStr)) {
+  if (/[^a-z\s]/i.test(charStr)) {
     event.preventDefault();
     return false;
   }
