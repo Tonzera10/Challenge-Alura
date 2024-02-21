@@ -146,7 +146,7 @@ footer {
     width: 32px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1023px) {
     .container {
         flex-direction: column;
         margin-top: 40px;
@@ -192,5 +192,66 @@ footer {
     
     .output-texto-maior, .output-texto-menor{
         width: 624px;
+    }
+}
+
+@media screen and (max-width: 767px){
+    
+    section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .input{
+        width: 100%;
+        gap: 16px;       
+    }
+
+    .input-text{
+        width: 343px;
+        height: 250px;
+    }
+
+    .botoes{
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .botao-azul, .botao-cinza{
+        width: 343px;
+    }
+
+    .botao-branco{
+        width: 279px;
+    }
+
+    .output{
+        width: 327px;
+        padding: 32px 0px;
+    }
+
+    .conteudo-original{
+        width: auto;
+        margin: 32px;
+        gap: 16px;
+    }
+
+    .conteudo-substituto{
+        width: auto;
+        margin: 16px;
+        gap: 32px;
+    }
+
+    #output-texto{
+        width: 279px;
+    }
+
+    .output-texto-maior, .output-texto-menor {
+        width: 263px;
+    }
+
+    footer{
+        flex-wrap: wrap;
     }
 }
