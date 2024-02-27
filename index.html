@@ -4,13 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="app.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.5/dist/sweetalert2.all.min.js"></script>
+    <script src="https://unpkg.com/sweetalert2@7.12.15/dist/sweetalert2.all.js"></script>
     <title>Decodificador de Texto</title>
     <link rel="stylesheet" href="./styles/style.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.5/dist/sweetalert2.min.css"
-      rel="folha de estilo"
-    />
   </head>
   <body>
     <div class="container">
@@ -23,7 +19,6 @@
             class="input-text"
             id="inputText"
             type="text"
-            onkeypress="return apenasMinusculas(event)"
             ls-textarea-autoresize
             required
             placeholder="Digite seu texto"

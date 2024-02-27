@@ -1,17 +1,14 @@
 let texto = document.getElementById("inputText");
+texto.addEventListener('input', apenasMinusculasSemCaracteres);
 let output = document.getElementById("output");
 let outputTexto = document.getElementById('output-texto');
 let outputOriginal = document.getElementById('conteudo-original');
 let outputSubstituto = document.getElementById('conteudo-substituto');
 
-function apenasMinusculas(event) {
-  const charCode = event.which || event.keyCode;
-  const charStr = String.fromCharCode(charCode);
-  if (/[^a-z\s]/.test(charStr)) {
-    event.preventDefault();
-    return false;
-  }
-  return true;
+function apenasMinusculasSemCaracteres(event) {
+  const inputValue = event.target.value.toLowerCase(); 
+  const cleanValue = inputValue.replace(/[^a-z\s]/g, ''); 
+  event.target.value = cleanValue; 
 }
 
 function criptografar() {
@@ -46,11 +43,7 @@ function descriptografarTexto(texto) {
 
 function copiar() {
   window.navigator.clipboard.writeText(outputTexto.value);
-  Swal.fire({
-    title: "Copiado!",
-    text: "Você copiou o texto.",
-    icon: "success"
-  });
+  swal('Copiado!', 'Texto copiado com sucesso!', 'success');
 }
 
 function substituirOutput() {
