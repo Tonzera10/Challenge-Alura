@@ -14,6 +14,10 @@ body {
     margin: 40px;
 }
 
+.imgLogoAlura{
+    margin-left: 85px;
+}
+
 main {
     display: flex;
     gap: 80px;
@@ -150,6 +154,10 @@ footer {
     .container {
         flex-direction: column;
         margin-top: 40px;
+    }
+
+    .imgLogoAlura{
+        margin-left: 0px;
     }
     
     main {
